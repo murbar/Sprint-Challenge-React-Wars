@@ -1,8 +1,3 @@
-.character-list {
-  max-width: 30rem;
-  margin: 2rem auto;
-}
-
 .character-list-item {
   background: rgba(0, 0, 0, 0.75);
   color: #eee;
@@ -29,4 +24,10 @@
   padding-right: 0.5rem;
   color: white;
   color: lawngreen;
+}
+
+.character-list-item .name {
+  border-bottom: 1px solid white;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
