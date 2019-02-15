@@ -8,6 +8,7 @@ class App extends Component {
     super();
     this.state = {
       starwarsChars: [],
+      charsCount: null,
       nextUrl: null,
       prevUrl: null
     };
@@ -29,7 +30,8 @@ class App extends Component {
         this.setState({
           starwarsChars: data.results,
           nextUrl: data.next,
-          prevUrl: data.previous
+          prevUrl: data.previous,
+          charsCount: data.count
         });
       })
       .catch(err => {
@@ -42,10 +44,12 @@ class App extends Component {
   };
 
   render() {
-    const { starwarsChars, nextUrl, prevUrl } = this.state;
+    const { starwarsChars, nextUrl, prevUrl, charsCount } = this.state;
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <h2 className="characters-count">{charsCount} characters</h2>
+        <Pagination next={nextUrl} prev={prevUrl} onPageChange={this.handlePageChange} />
         <CharactersList characters={starwarsChars} />
         <Pagination next={nextUrl} prev={prevUrl} onPageChange={this.handlePageChange} />
       </div>
