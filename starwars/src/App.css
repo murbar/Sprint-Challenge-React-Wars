@@ -1,3 +1,8 @@
+.App {
+  max-width: 30rem;
+  margin: 2rem auto;
+}
+
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
