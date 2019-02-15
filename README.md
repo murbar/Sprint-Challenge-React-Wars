@@ -26,11 +26,19 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+> React is a JS framework built by Facebook for building interactive UIs. It allows us to compose small encapsulated UI components to build complex apps. React manages the state of our components and updates the DOM automatically and efficiently when state changes. The modularity it provides makes it easier to write and debug components. JSX gives us the full power JavaScript in our component "templates."
+
 - [ ] What does it mean to _think_ in react?
+
+> To think in React is to think about what in your app can be a component, what place in the component hierarchy it will be, where in the component hierarchy its state will live, and how data flows between components.
 
 - [ ] Describe state.
 
+> In React, `state` is a component's internal store of the data that component is concerned with. For example, a to-do list component might store an array of its to-dos, and an individual to-do component might store its own `id`, whether or not it is completed, and a reference to a function it could use to delete itself. A component can pass it's state around to other component via `props`.
+
 - [ ] Describe props.
+
+> Props are the inputs to our React components. We can use props to display app data on screen and pass data down through the component hierarchy.
 
 ## Project Set Up
 
@@ -43,15 +51,15 @@ Follow these steps to set up and work on your project:
 - [ ] Change directories into `./starwars` (`cd starwars`) and run `yarn install` to retrieve all needed dependencies.
 - [ ] Once you have installed the _node_modules_, run `yarn start or` to get your server up and running.
 - [ ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
-Follow these steps for completing your project.
+      Follow these steps for completing your project.
 - [ ] Implement the project on this Branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [ ] PM then will count the HW as done by merging the branch back into master.
 
 Please note:
 
