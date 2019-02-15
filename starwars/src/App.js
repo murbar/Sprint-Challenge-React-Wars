@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
+import CharactersList from './components/CharacterList';
+import Pagination from './components/Pagination';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      charsCount: null,
+      nextUrl: null,
+      prevUrl: null
     };
   }
 
@@ -22,17 +27,31 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        this.setState({
+          starwarsChars: data.results,
+          nextUrl: data.next,
+          prevUrl: data.previous,
+          charsCount: data.count
+        });
       })
       .catch(err => {
         throw new Error(err);
       });
   };
 
+  handlePageChange = dataSrc => {
+    this.getCharacters(dataSrc);
+  };
+
   render() {
+    const { starwarsChars, nextUrl, prevUrl, charsCount } = this.state;
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <h2 className="characters-count">{charsCount} characters</h2>
+        <Pagination next={nextUrl} prev={prevUrl} onPageChange={this.handlePageChange} />
+        <CharactersList characters={starwarsChars} />
+        <Pagination next={nextUrl} prev={prevUrl} onPageChange={this.handlePageChange} />
       </div>
     );
   }

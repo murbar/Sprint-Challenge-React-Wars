@@ -1,0 +1,52 @@
+.character-list-item {
+  background: rgba(0, 0, 0, 0.75);
+  color: #eee;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+
+  text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.7);
+}
+.character-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.character-list-item > div {
+  margin-bottom: 0.2rem;
+}
+
+.character-list-item .label {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 80%;
+  width: 25%;
+  text-align: right;
+  padding-right: 0.5rem;
+  color: white;
+  color: lawngreen;
+}
+
+.character-list-item .name {
+  border-bottom: 1px solid white;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pagination {
+  padding: 1.25rem 0;
+}
+.pagination button {
+  text-transform: uppercase;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.75);
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+.pagination button:hover {
+  box-shadow: 0 0 1rem lawngreen;
+}
+.pagination .prev {
+  margin-right: 1rem;
+}
